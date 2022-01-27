@@ -1,4 +1,10 @@
-﻿Option Explicit On
+﻿'Seth Nieslen Rasmussen
+'RCET0265
+'Spring 2022
+'Say My Name Again
+'
+
+Option Explicit On
 Option Strict On
 Option Compare Text
 
@@ -50,6 +56,7 @@ Module Thing
 
             End Select
         Loop Until runAgain = False
+
         Console.ReadLine()
 
 
