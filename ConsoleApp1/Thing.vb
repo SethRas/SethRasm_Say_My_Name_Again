@@ -1,63 +1,58 @@
-﻿Module Thing
+﻿Option Explicit On
+Option Strict On
+Option Compare Text
+
+Module Thing
 
     Sub Main()
-        'Dim userResponse As String
 
-
-        'Console.WriteLine("What's your name?")
-        'userResponse = Console.ReadLine()
-
-
-        'Dim message As String
-        'message = userResponse & " Wow... you're parents really waited 9 months for a baby and named you" ${ userResponse } "huh"
-        'Do
-        '    Select Case userResponse
-        '        Case "GTA 4"
-        '            Console.WriteLine(message)
-        '        Case "Battlefield 3"
-        '            Console.WriteLine(message)
-        '        Case "GRID"
-        '            Console.WriteLine(message)
-        '        Case "Infamous"
-        '            Console.WriteLine(message)
-        '        Case Else
-        '            Console.WriteLine("Looks like your game is not on my list")
-
-        '    End Select
-        'Loop
-
-        'Console.ReadLine()
 
         Dim name As String
+        Dim runAgain As Boolean
+
+        Do
 
 
-        Console.WriteLine("Your name?")
-        name = Console.ReadLine()
+            Console.WriteLine("Your name?")
+            name = Console.ReadLine()
 
 
-        Dim message As String
-        Dim message1 As String
-        message = name & " is your favourite game!"
-        message1 = name & " is alright"
+            Dim message As String
+            Dim message1 As String
+            Dim message2 As String
+            Dim message3 As String
 
-        Select Case name
+            message = name & " Cuoio!"
+            message1 = name & " I'm Sorry, please take me back!"
+            message2 = name & " Aren't you glad this isn't labVIEW?"
+            message3 = name & " Look I did it!!!"
 
 
-                Case "GTA 4"
+
+            Select Case name
+
+
+                Case "Joe"
                     Console.WriteLine(message)
-                Case "Battlefield 3"
+                    runAgain = True
+                Case "Emily"
                     Console.WriteLine(message1)
-                Case "GRID"
+                    runAgain = True
+                Case "Seth"
                     Console.WriteLine(message2)
-                Case "Infamous"
+                    runAgain = True
+                Case "Tim"
                     Console.WriteLine(message3)
+                    runAgain = True
                 Case Else
-                    Console.WriteLine("Looks like your game is not on my list")
-
+                    Console.WriteLine("Who dat boi? Who him is?")
+                    runAgain = False
 
             End Select
-
+        Loop Until runAgain = False
         Console.ReadLine()
+
+
 
 
     End Sub
